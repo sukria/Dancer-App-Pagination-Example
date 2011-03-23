@@ -1,0 +1,35 @@
+  
+<!-- 
+    Credit goes to the Ruby on Rails team for this page 
+    has been heavily based on the default Rails page that is 
+    built with a scaffolded application.
+
+    Thanks a lot to them for their work.
+
+    See Ruby on Rails if you want a kickass framework in Ruby:
+    http://www.rubyonrails.org/
+-->
+
+<div id="page">
+  <div id="content">
+
+    <% USE page = Pagination(letters, current_page, entries_per_page) %>
+
+    <ol>
+    <% FOREACH item IN page.page_data %>
+
+        <li><% item %></li>
+    
+    <% END %>
+    </ol>
+
+
+    <div>
+    First page: <% page.first_page %>
+    Prev page: <% page.previous_page %>
+    Next page: <% page.next_page %>
+    Last page: <% page.last_page %>
+    </div>
+
+  </div>
+</div>
