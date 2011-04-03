@@ -23,12 +23,15 @@
     <% END %>
     </ol>
 
-
     <div>
-    First page: <% page.first_page %>
-    Prev page: <% page.previous_page %>
-    Next page: <% page.next_page %>
-    Last page: <% page.last_page %>
+        <strong>First page:</strong> <a href="?page=<% page.first_page %>">First page</a>
+        <% IF page.previous_page %> 
+            <strong>Prev page:</strong> <a href="?page=<% page.previous_page %>"><% page.previous_page %></a>
+        <% END %> 
+        <% IF page.next_page %> 
+            <strong>Next page:</strong> <a href="?page=<% page.next_page %>"><% page.next_page %></a>
+        <% END %> 
+        <strong>Last page:</strong> <a href="?page=<% page.last_page %>">Last page</a>
     </div>
 
   </div>
